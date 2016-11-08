@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Trapp</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#theMenu">
+
+<!-- Menu -->
+<nav class="menu" id="theMenu">
+    <div class="menu-wrap">
+        <i class="fa fa-times menu-close"></i>
+        <div class="smoothScroll"><h1>Admin Login</h1></div>
+            <div class="input-group">
+                <div class="tupperware">
+                    <input type="text" class="form-control login" placeholder="Username">
+                    <input type="text" class="form-control login" placeholder="Password...">
+                </div>
+
+                <button class="btn btn-success login">Submit</button>
+
+            </div><!-- /input-group -->
+    </div>
+
+    <!-- Menu button -->
+    <div id="menuToggle"><i class="fa fa-bars"></i></div>
+</nav>
+
+<div id="googlemaps"></div>
+
+<div id="element">
+
+    <section id="home"></section>
+    <div id="headerwrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <img src="assets/img/Logomakr_6UiuOD.png" alt="trapp logo">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">William Blount High School <i class="fa fa-arrow-circle-right pullRight" aria-hidden="true"></i></div>
+
+                    </div>
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">Carpenters Middle School <i class="fa fa-arrow-circle-right pullRight" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">Union Grove Middle School <i class="fa fa-arrow-circle-right left pullRight" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">Fairview Elementary School <i class="fa fa-arrow-circle-right pullRight" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div><! --/row -->
+        </div><! --/container -->
+    </div><! --/headerwrap -->
+</div>
+
+<div id="footer" class="navbar-fixed-bottom">
+    <h5>WOWYOURCLIENT &copy; 2016</h5>
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.stellar.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMEZiWzR_Oe22ml8Rl1-BNzdEG5pCJO6s&callback=showGoogleMaps" async defer></script>
+
+<script type="text/javascript">
+
+    // The latitude and longitude of your business / place
+    var position = [35.845626, -86.390778];
+
+    function showGoogleMaps() {
+
+        var latLng = new google.maps.LatLng(position[0], position[1]);
+
+        var mapOptions = {
+            rotateControl: false,
+            fullscreenControl: false,
+            scrollwheel: false,
+            zoom: 8, // initialize zoom level - the max value is 21
+            navigationControl: false,
+            disableDefaultUI: true,
+            mapTypeControl: false,
+            streetViewControl: false, // hide the yellow Street View pegman
+            scaleControl: false, // allow users to zoom the Google Map
+            draggable: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: latLng
+        };
+
+        map = new google.maps.Map(document.getElementById('googlemaps'),
+                mapOptions);
+    }
+
+    google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+</script>
+<script>
+    $(function(){
+        $.stellar({
+            horizontalScrolling: false,
+            verticalOffset: 40
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function() {
+        jQuery(".fancybox").fancybox();
+    });
+</script>
+
+</body>
+</html>

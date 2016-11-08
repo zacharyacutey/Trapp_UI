@@ -1,0 +1,302 @@
+
+/* ==========================================================================
+   Base Styles, Bootstrap Modifications & Fonts Import
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+::-moz-selection {
+    background: #f2c2c9;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+::selection {
+    background: #16a085;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.centered {
+	text-align: center
+}
+
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: sans-serif;
+	font-weight: 400;
+}
+
+/* ==========================================================================
+   MENU CONFIGURATION
+   ========================================================================== */
+
+.menu {
+	position: fixed;
+	right: -200px;
+	width: 260px;
+	height: 100%;
+	top: 0;
+	z-index: 10;
+	text-align: left;
+}
+
+.menu.menu-open {
+	right: 0px;
+}
+
+.menu-wrap {
+	position: absolute;
+	top: 0;
+	left: 60px;
+	background: #1a1a1a;
+	width: 200px;
+	height: 100%;
+}
+
+.menu h1.logo a {
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0.15em;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: #ffffff;
+	margin-top: 20px;
+}
+
+.menu h1.logo a:hover {
+	color: #f85c37;
+}
+
+.menu img.logo {
+	margin: 20px 0;
+	max-width: 160px;
+}
+
+.menu h1 {
+	margin-left: 20px;
+	color: lightgrey;
+	display: block;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 40px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.menu-close {
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	font-size: 14px;
+	color: #808080;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	top: 20px;
+	right: 0px;
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+.menu-close:hover {
+	color: #ffffff;
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+/* Push the body after clicking the menu button */
+.body-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.body-push-toright {
+	left: 200px;
+}
+
+.body-push-toleft {
+	left: -200px;
+}
+
+.menu,
+.body-push {
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+		-ms-transition: all .3s ease;
+		 -o-transition: all .3s ease;
+			transition: all .3s ease;
+}
+
+#menuToggle {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	z-index: 11;
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	color: #ffffff;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	background: rgba(0,0,0,0.4);
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+#menuToggle:hover {
+	color: #ffffff;
+	background: rgba(0,0,0,0.6);
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+
+/* ==========================================================================
+   Background
+   ========================================================================== */
+
+#googlemaps {
+	height: 100%;
+	width: 100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+}
+
+/* ==========================================================================
+   Foreground
+   ========================================================================== */
+
+.login{
+	margin:7px;
+	border-radius: 0;
+}
+
+/* Alternate non-bootstap version of container :) */
+.tupperware{
+	width:188px;
+}
+
+#element{
+	z-index: 1;
+}
+
+#form{
+    position:relative;
+}
+
+#headerwrap img{
+	display: block;
+	width: 500px;
+	padding: 45px;
+	margin: 75px auto auto auto;
+}
+#headerwrap #search{
+    margin:0;
+    float: left;
+	height:45px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+	box-shadow: 0 0 8px 1px darkgrey;
+
+}
+#headerwrap .btn-group{
+    position:absolute;
+    right:7px;
+    top:5px;
+}
+
+#headerwrap .btn-group #dropDown{
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+#footer {
+	position: absolute;
+	text-align: center;
+	font-size: 14px;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+	background-color: rgba(92,92,92,0.92);
+	padding: 10px;
+}
+
+.panel-danger > .panel-heading {
+	color: #FFFFFF;
+	background-color: rgb(212, 63, 58);
+	border-radius: 4px;
+	border: none;
+}
+
+.pullRight{
+	float: right;
+	margin: 4px;
+}
+
+.panel-success > .panel-heading {
+	color: #FFFFFF;
+	background-color: rgb(57, 132, 57);
+	border-radius: 4px;
+	border: none;
+}
+
+.desc {
+	margin-top: 25px;
+}
